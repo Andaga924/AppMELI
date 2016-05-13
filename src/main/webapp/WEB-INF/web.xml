@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+	<display-name>AppMELI</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>ApiControlOAuth</servlet-name>
+        <servlet-class>com.api.controller.ApiControlOAuth</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ApiControlPerfil</servlet-name>
+        <servlet-class>com.api.controller.ApiControlPerfil</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApiControlPerfil</servlet-name>
+        <url-pattern>/ApiControlPerfil</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ApiControlOAuth</servlet-name>
+        <url-pattern>/ApiControlOAuth</url-pattern>
+    </servlet-mapping>
+</web-app>
